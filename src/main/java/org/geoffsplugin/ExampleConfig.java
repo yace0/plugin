@@ -1,4 +1,4 @@
-package com.example;
+package org.geoffsplugin;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
@@ -8,12 +8,12 @@ import net.runelite.client.config.ConfigItem;
 public interface ExampleConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+			keyName = "holdLeftArrow",
+			name = "Hold Left Arrow Key",
+			description = "Hold down the left arrow key when enabled"
 	)
-	default String greeting()
+	default boolean holdLeftArrow()
 	{
-		return "Hello";
+		return false;
 	}
 }
